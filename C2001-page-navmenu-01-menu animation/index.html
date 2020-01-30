@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS - Menu animation</title>
+	<link rel="stylesheet" type="text/css" href="style_main.css">
+	<link rel="stylesheet" type="text/css" href="style_menu.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+</head>
+
+<body>
+<div class="page">
+	<div class="content_menu">
+		<h1>Menu Hover Animation <br><span>Using HTML and CSS</span></h1>
+		<ul class="main">
+			<li class="current"><a class="menu" href="#" data-hover="home">Home</a></li>
+			<li><a  class="menu" href="#" data-hover="departments">Departments</a></li>
+			<li><a  class="menu"href="#" data-hover="courses">Course</a></li>
+			<li><a  class="menu"href="#" data-hover="About us">About Us</a></li>
+			<li><a  class="menu"href="#" data-hover="contact">Contact</a></li>
+		</ul>
+	</div>
+</div>
+<script>
+
+	$(document).ready(function(){
+	  $('a').click(function(){
+	  	// alert("clicked");
+
+	    var self = $(this).parent();
+
+	  	$('.main li').removeClass('current');
+
+	    self.addClass('current');
+	});
+	// alert("hello");
+	});
+
+</script>
+</body>
+
+</html>
